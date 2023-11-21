@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../public/css/login.css">
+  <link rel="stylesheet" href="../public/css/bootstrap.css">
+</head>
+<body>
+  <form id="loginForm">
+    <h2>Login</h2>
+    <label for="correo">Correo:</label>
+    <input type="text" id="correo" name="correo" required>
+    <br>
+    <label for="contraseña">Contraseña:</label>
+    <input type="password" id="contraseña" name="contraseña" required>
+    <br>
+    <button type="button" onclick="login()">Iniciar sesión</button>
+    <p>No tienes una cuenta? <span class="register-link">Regístrate</span></p>
+  </form>
+
+  <!-- Modal -->
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+    <h2>Registro</h2>
+    <label for="nombres">Nombres:</label>
+    <input type="text" id="nombres" name="nombres" required>
+    <br>
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" required>
+    <br>
+    <label for="correoRegistro">Correo:</label>
+    <input type="text" id="correoRegistro" name="correoRegistro" required>
+    <br>
+    <label for="contraseñaRegistro">Contraseña:</label>
+    <input type="password" id="contraseñaRegistro" name="contraseñaRegistro" required>
+    <br>
+    <label for="telefono">Teléfono:</label>
+    <input type="text" id="telefono" name="telefono" required>
+    <br>
+    <label for="estado">Estado:</label>
+    <input type="text" id="estado" name="estado" required>
+    <br>
+    <label for="foto">Foto (URL):</label>
+    <input type="text" id="foto" name="foto" required>
+    <br>
+    <button type="button" onclick="register()">Registrarse</button>
+    <p>¿Ya tienes una cuenta? <span class="register-link" onclick="closeModal()">Inicia sesión</span></p>
+  </div>
+</div>
+
+  <script src="../public/js/login.js"></script>
+</body>
+</html>

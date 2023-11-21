@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante App</title>
+  <link rel="stylesheet" type="text/css" href="../public/css/tipoplato.css">
+  <link rel="stylesheet" href="../public/css/bootstrap.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Restaurante UDI</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">NULL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tipoplato.html">Tipos de Plato</a>
+              </li>    
+              <li class="nav-item">
+                <a class="nav-link" href="plato.html">Platos</a>
+              </li>            
+              <li class="nav-item">
+                <a class="nav-link" href="consumo.html">Consumo</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="consumoDetalle.html">ConsumoDetalle</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="producto.html">Producto</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="reserva.html">Reserva</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="servicioplato.html">ServicioPlato</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicio</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="usuario.html">Usuarios</a>
+              </li>  
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<h1>Restaurante App</h1>
+
+<button onclick="openModal()">Nuevo Tipo de Plato</button>
+
+<div id="tipoPlatoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Nuevo Tipo de Plato</h2>
+    <form id="tipoPlatoForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <br>
+      <label for="descripcion">Descripción:</label>
+      <input type="text" id="descripcion" name="descripcion" required>
+      <br>
+      <button type="button" onclick="saveTipoPlato()">Guardar</button>
+    </form>
+  </div>
+</div>
+
+<table id="tipoPlatoTable">
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Acciones</th>
+  </tr>
+</table>
+
+<script src="../public/js/tipoplato.js"></script>
+
+</body>
+</html>

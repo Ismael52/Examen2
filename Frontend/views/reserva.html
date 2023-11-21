@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante App - Reservas</title>
+  <link rel="stylesheet" type="text/css" href="../public/css/tipoplato.css">
+  <link rel="stylesheet" href="../public/css/bootstrap.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Restaurante UDI</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">NULL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tipoplato.html">Tipos de Plato</a>
+              </li>    
+              <li class="nav-item">
+                <a class="nav-link" href="plato.html">Platos</a>
+              </li>            
+              <li class="nav-item">
+                <a class="nav-link" href="consumo.html">Consumo</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="consumoDetalle.html">ConsumoDetalle</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="producto.html">Producto</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="reserva.html">Reserva</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="servicioplato.html">ServicioPlato</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicio</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="usuario.html">Usuarios</a>
+              </li>  
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<h1>Reservas</h1>
+
+<button onclick="openModal()">Nueva Reserva</button>
+
+<div id="reservaModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Nueva Reserva</h2>
+    <form id="reservaForm">
+      <label for="fecha_reserva">Fecha Reserva:</label>
+      <input type="text" id="fecha_reserva" name="fecha_reserva" required>
+      <br>
+      <label for="fecha_servicio">Fecha Servicio:</label>
+      <input type="text" id="fecha_servicio" name="fecha_servicio" required>
+      <br>
+      <label for="cupo">Cupo:</label>
+      <input type="number" id="cupo" name="cupo" required>
+      <br>
+      <label for="observacion">Observación:</label>
+      <input type="text" id="observacion" name="observacion">
+      <br>
+      <label for="estado">Estado:</label>
+      <input type="text" id="estado" name="estado" required>
+      <br>
+      <label for="total">Total:</label>
+      <input type="number" id="total" name="total" required>
+      <br>
+      <label for="idusuario">ID Usuario:</label>
+      <input type="number" id="idusuario" name="idusuario" required>
+      <br>
+      <button type="button" onclick="saveReserva()">Guardar</button>
+    </form>
+  </div>
+</div>
+
+<table id="reservaTable">
+  <tr>
+    <th>ID</th>
+    <th>Fecha Reserva</th>
+    <th>Fecha Servicio</th>
+    <th>Cupo</th>
+    <th>Observación</th>
+    <th>Estado</th>
+    <th>Total</th>
+    <th>ID Usuario</th>
+    <th>Acciones</th>
+  </tr>
+</table>
+
+<script src="../public/js/reserva.js"></script>
+
+</body>
+</html>

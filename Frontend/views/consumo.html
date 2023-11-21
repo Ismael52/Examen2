@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante App - Consumos</title>
+  <link rel="stylesheet" type="text/css" href="../public/css/tipoplato.css">
+  <link rel="stylesheet" href="../public/css/bootstrap.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Restaurante UDI</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">NULL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tipoplato.html">Tipos de Plato</a>
+              </li>    
+              <li class="nav-item">
+                <a class="nav-link" href="plato.html">Platos</a>
+              </li>            
+              <li class="nav-item">
+                <a class="nav-link" href="consumo.html">Consumo</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="consumoDetalle.html">ConsumoDetalle</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="producto.html">Producto</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="reserva.html">Reserva</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="servicioplato.html">ServicioPlato</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicio</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="usuario.html">Usuarios</a>
+              </li>  
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <h1>Consumos</h1>
+
+      <button onclick="openConsumoModal()">Nuevo Consumo</button>
+      
+      <div id="consumoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeConsumoDetalleModal()">&times;</span>
+    <h2>Nuevo Consumo</h2>
+    <form id="consumoForm">
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" required>
+      <br>
+      <label for="estado">Estado:</label>
+      <input type="text" id="estado" name="estado" required>
+      <br>
+      <label for="total">Total:</label>
+      <input type="number" id="total" name="total" required>
+      <br>
+      <label for="idReserva">ID Reserva:</label>
+      <input type="number" id="idReserva" name="idReserva" required>
+      <br>
+      <button type="button" onclick="saveConsumo()">Guardar</button>
+    </form>
+  </div>
+</div>
+      
+      <table id="consumoTable">
+        <tr>
+          <th>ID</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+          <th>Total</th>
+          <th>ID Reserva</th>
+          <th>Acciones</th>
+        </tr>
+      </table>
+      
+      <h1>ConsumoDetalle</h1>
+
+<button onclick="openConsumoDetalleModal()">Nuevo ConsumoDetalle</button>
+
+<div id="consumoDetalleModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Nuevo ConsumoDetalle</h2>
+    <form id="consumoDetalleForm">
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" name="cantidad" required>
+      <br>
+      <label for="subtotal">Subtotal:</label>
+      <input type="number" id="subtotal" name="subtotal" required>
+      <br>
+      <label for="idConsumo">ID Consumo:</label>
+      <input type="number" id="idConsumo" name="idConsumo" required>
+      <br>
+      <label for="idProducto">ID Producto:</label>
+      <input type="number" id="idProducto" name="idProducto" required>
+      <br>
+      <button type="button" onclick="saveConsumoDetalle()">Guardar</button>
+    </form>
+  </div>
+</div>
+
+<table id="consumoDetalleTable">
+  <tr>
+    <th>ID</th>
+    <th>Cantidad</th>
+    <th>Subtotal</th>
+    <th>ID Consumo</th>
+    <th>ID Producto</th>
+    <th>Acciones</th>
+  </tr>
+</table>
+
+<script src="../public/js/consumo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante App - Servicios</title>
+  <link rel="stylesheet" type="text/css" href="../public/css/tipoplato.css">
+  <link rel="stylesheet" href="../public/css/bootstrap.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Restaurante UDI</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">NULL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tipoplato.html">Tipos de Plato</a>
+              </li>    
+              <li class="nav-item">
+                <a class="nav-link" href="plato.html">Platos</a>
+              </li>            
+              <li class="nav-item">
+                <a class="nav-link" href="consumo.html">Consumo</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="consumoDetalle.html">ConsumoDetalle</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="producto.html">Producto</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="reserva.html">Reserva</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="servicioplato.html">ServicioPlato</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicio</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="usuario.html">Usuarios</a>
+              </li>  
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<h1>Servicios</h1>
+
+<button onclick="openServicioModal()">Nuevo Servicio</button>
+
+<div id="servicioModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeServicioModal()">&times;</span>
+    <h2>Nuevo Servicio</h2>
+    <form id="servicioForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <br>
+      <label for="descripcion">Descripción:</label>
+      <input type="text" id="descripcion" name="descripcion" required>
+      <br>
+      <label for="fechaINI">Fecha de Inicio:</label>
+      <input type="text" id="fechaINI" name="fechaINI" required>
+      <br>
+      <label for="fechaFIN">Fecha de Fin:</label>
+      <input type="text" id="fechaFIN" name="fechaFIN" required>
+      <br>
+      <label for="cupo">Cupo:</label>
+      <input type="number" id="cupo" name="cupo" required>
+      <br>
+      <label for="precio">Precio:</label>
+      <input type="number" id="precio" name="precio" required>
+      <br>
+      <label for="foto">Foto:</label>
+      <input type="text" id="foto" name="foto" required>
+      <br>
+      <label for="idusuario">ID Usuario:</label>
+      <input type="number" id="idusuario" name="idusuario" required>
+      <br>
+      <button type="button" onclick="saveServicio()">Guardar</button>
+    </form>
+  </div>
+</div>
+
+<table id="servicioTable">
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Fecha de Inicio</th>
+    <th>Fecha de Fin</th>
+    <th>Cupo</th>
+    <th>Precio</th>
+    <th>Foto</th>
+    <th>ID Usuario</th>
+    <th>Acciones</th>
+  </tr>
+</table>
+
+
+
+<h1>ServicioPlato</h1>
+
+<button onclick="openServicioPlatoModal()">Nuevo ServicioPlato</button>
+
+<div id="servicioPlatoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeServicioPlatoModal()">&times;</span>
+    <h2>Nuevo ServicioPlato</h2>
+    <form id="servicioPlatoForm">
+      <label for="idServicio">ID Servicio:</label>
+      <input type="number" id="idServicio" name="idServicio" required>
+      <br>
+      <label for="idPlato">ID Plato:</label>
+      <input type="number" id="idPlato" name="idPlato" required>
+      <br>
+      <button type="button" onclick="saveServicioPlato()">Guardar</button>
+    </form>
+  </div>
+</div>
+
+<table id="servicioPlatoTable">
+  <tr>
+    <th>ID</th>
+    <th>ID Servicio</th>
+    <th>ID Plato</th>
+    <th>Acciones</th>
+  </tr>
+</table>
+
+<script src="../public/js/servicios.js"></script>
+
+</body>
+</html>
